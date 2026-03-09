@@ -15,8 +15,13 @@ defmodule ElixirAuthGoogle.MixProject do
       package: package(),
       aliases: aliases(),
       # coverage
-      test_coverage: [tool: ExCoveralls],
-      preferred_cli_env: [
+      test_coverage: [tool: ExCoveralls]
+    ]
+  end
+
+  def cli do
+    [
+      preferred_envs: [
         c: :test,
         coveralls: :test,
         "coveralls.json": :test,
